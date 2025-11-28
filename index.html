@@ -27,9 +27,19 @@
         <section class="hero">
             <h1>Copy once,<br>paste anytime.</h1>
             <p class="tagline">Your clipboard history, saved privately on your Mac. Find and paste anything you've copied.</p>
-            <div class="cta-buttons">
-                <a href="#download" class="btn btn-primary">Download Free</a>
-                <a href="https://github.com/adamtwo/klippal" class="btn btn-secondary" target="_blank">View on GitHub</a>
+            <div class="cta-options">
+                <div class="cta-option">
+                    <span class="cta-label">Homebrew</span>
+                    <div class="brew-command">
+                        <code>brew install --cask klippal</code>
+                        <button class="copy-btn" onclick="navigator.clipboard.writeText('brew install --cask klippal')">Copy</button>
+                    </div>
+                </div>
+                <span class="cta-or">or</span>
+                <div class="cta-option">
+                    <span class="cta-label">Direct Download</span>
+                    <a href="https://github.com/adamtwo/klippal/releases/latest" class="btn btn-secondary">Download for Mac</a>
+                </div>
             </div>
             <p class="requirements">Requires macOS 13 Ventura or later</p>
         </section>
@@ -74,14 +84,18 @@
             <h2>Download</h2>
             <div class="download-options">
                 <div class="download-option">
-                    <h3>Direct Download</h3>
-                    <p>Get the app and start using it</p>
-                    <a href="https://github.com/adamtwo/klippal/releases/latest" class="btn btn-primary">Download for Mac</a>
-                </div>
-                <div class="download-option">
                     <h3>Homebrew</h3>
-                    <p>For those who prefer the terminal</p>
-                    <code>brew install --cask klippal</code>
+                    <p>Recommended for easy updates</p>
+                    <div class="brew-command">
+                        <code>brew install --cask klippal</code>
+                        <button class="copy-btn" onclick="navigator.clipboard.writeText('brew install --cask klippal')">Copy</button>
+                    </div>
+                </div>
+                <span class="download-or">or</span>
+                <div class="download-option">
+                    <h3>Direct Download</h3>
+                    <p>Download and install manually</p>
+                    <a href="https://github.com/adamtwo/klippal/releases/latest" class="btn btn-secondary">Download for Mac</a>
                 </div>
             </div>
             <p class="signed-note">Verified by Apple for your security.</p>
