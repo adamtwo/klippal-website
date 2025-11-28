@@ -91,13 +91,15 @@ main {
     align-items: center;
     text-align: center;
     padding-top: 80px;
+    padding-bottom: 2rem;
+    gap: 0;
 }
 
 .hero h1 {
-    font-size: clamp(2.5rem, 8vw, 5rem);
+    font-size: clamp(2rem, 6vw, 3.5rem);
     font-weight: 700;
     line-height: 1.1;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     background: linear-gradient(135deg, #fff 0%, #888 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -210,6 +212,35 @@ main {
     margin-top: 1.5rem;
     font-size: 0.875rem;
     color: var(--color-text-muted);
+}
+
+/* Demo in Hero */
+.hero .demo-container {
+    width: 100%;
+    max-width: 640px;
+    margin-top: 2rem;
+}
+
+.demo-placeholder {
+    aspect-ratio: 16 / 9;
+    background: var(--color-surface);
+    border: 2px dashed var(--color-border);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+}
+
+.play-icon {
+    font-size: 2.5rem;
+    color: var(--color-text-muted);
+}
+
+.demo-placeholder p {
+    color: var(--color-text-muted);
+    font-size: 0.875rem;
 }
 
 /* Features Section */
