@@ -181,6 +181,30 @@ main {
     background: var(--color-primary-hover);
 }
 
+.brew-command {
+    position: relative;
+}
+
+.copy-tooltip {
+    position: absolute;
+    top: -2rem;
+    right: 0;
+    background: #22c55e;
+    color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    animation: fadeInOut 1.5s ease-in-out;
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0; transform: translateY(4px); }
+    15% { opacity: 1; transform: translateY(0); }
+    85% { opacity: 1; transform: translateY(0); }
+    100% { opacity: 0; transform: translateY(-4px); }
+}
+
 .btn {
     display: inline-block;
     padding: 0.875rem 1.75rem;
@@ -303,9 +327,8 @@ main {
     display: flex;
     gap: 2rem;
     justify-content: center;
-    align-items: stretch;
-    flex-wrap: wrap;
-    max-width: 800px;
+    align-items: center;
+    flex-wrap: nowrap;
     margin: 0 auto 2rem;
 }
 
@@ -336,6 +359,10 @@ main {
 .download-option .brew-command {
     justify-content: center;
     white-space: nowrap;
+}
+
+.download-option .brew-command code {
+    font-size: 0.875rem;
 }
 
 .signed-note {
