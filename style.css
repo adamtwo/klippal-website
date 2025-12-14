@@ -86,13 +86,12 @@ main {
 
 /* Hero Section */
 .hero {
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     text-align: center;
-    padding-top: 80px;
+    padding-top: 100px;
     padding-bottom: 2rem;
     gap: 0;
 }
@@ -109,10 +108,10 @@ main {
 }
 
 .tagline {
-    font-size: 1.125rem;
+    font-size: 1rem;
     color: var(--color-text-muted);
-    max-width: 600px;
-    margin-bottom: 1.5rem;
+    max-width: 800px;
+    margin-bottom: 2.5rem;
 }
 
 .cta-options {
@@ -259,7 +258,7 @@ main {
 
 /* Features Section */
 .features {
-    padding: 6rem 0;
+    padding: 1rem 0 6rem 0;
 }
 
 .features h2 {
@@ -302,7 +301,7 @@ main {
 
 /* Download Section */
 .download {
-    padding: 6rem 0;
+    padding: 2rem 0;
     text-align: center;
 }
 
