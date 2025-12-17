@@ -152,6 +152,7 @@ main {
 .brew-command {
     display: flex;
     align-items: center;
+    flex-wrap: nowrap;
     background: var(--color-surface);
     border: 1px solid var(--color-border);
     border-radius: 8px;
@@ -163,6 +164,9 @@ main {
     font-family: var(--font-mono);
     font-size: 1rem;
     color: var(--color-primary);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .copy-btn {
@@ -174,6 +178,8 @@ main {
     font-weight: 500;
     cursor: pointer;
     transition: background 0.2s;
+    flex-shrink: 0;
+    white-space: nowrap;
 }
 
 .copy-btn:hover {
@@ -381,8 +387,8 @@ footer {
     color: var(--color-text);
 }
 
-/* Responsive */
-@media (max-width: 768px) {
+/* Responsive - Tablet & Mobile */
+@media (max-width: 900px) {
     nav {
         padding: 1rem;
     }
@@ -391,16 +397,133 @@ footer {
         gap: 1rem;
     }
 
+    .nav-links a {
+        font-size: 0.875rem;
+    }
+
     main {
         padding: 0 1rem;
     }
 
-    .cta-buttons {
+    .hero {
+        padding-top: 80px;
+    }
+
+    .hero h1 {
+        font-size: 1.75rem;
+    }
+
+    .tagline {
+        font-size: 0.9rem;
+        padding: 0 0.5rem;
+    }
+
+    /* CTA section responsive */
+    .cta-options {
         flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+    }
+
+    .cta-or {
+        margin-top: 0;
+    }
+
+    .cta-option {
+        width: 100%;
+    }
+
+    .cta-option .brew-command {
+        height: auto;
+    }
+
+    .cta-option .btn {
+        height: auto;
+        display: block;
+        justify-content: center;
+    }
+
+    .brew-command {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.75rem;
+        padding: 1rem;
+        width: 100%;
+    }
+
+    .brew-command code {
+        font-size: 0.8rem;
+        white-space: normal;
+        word-break: break-all;
+        text-align: center;
+        width: 100%;
+        overflow: visible;
+        text-overflow: clip;
+    }
+
+    .copy-btn {
+        width: auto;
+        padding: 0.5rem 1.5rem;
     }
 
     .btn {
+        display: block;
         width: 100%;
         text-align: center;
+    }
+
+    /* Features responsive */
+    .features {
+        padding: 2rem 0 4rem 0;
+    }
+
+    .features h2 {
+        font-size: 1.75rem;
+        margin-bottom: 2rem;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .feature {
+        padding: 1.5rem;
+    }
+
+    .feature-icon {
+        font-size: 2rem;
+    }
+
+    .feature h3 {
+        font-size: 1.1rem;
+    }
+
+    /* Download section responsive */
+    .download h2 {
+        font-size: 1.75rem;
+        margin-bottom: 2rem;
+    }
+
+    .download-options {
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+    }
+
+    .download-option {
+        width: 100%;
+        padding: 1.25rem;
+    }
+
+    .download-option .brew-command code {
+        font-size: 0.75rem;
+    }
+
+    /* Footer responsive */
+    .footer-links {
+        flex-direction: column;
+        gap: 1rem;
     }
 }
