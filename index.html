@@ -33,6 +33,10 @@
     <script>
         function copyCommand(btn) {
             navigator.clipboard.writeText('brew install --cask adamtwo/klippal/klippal');
+            gtag('event', 'copy_command', {
+                'event_category': 'engagement',
+                'event_label': 'homebrew_command'
+            });
             const tooltip = document.createElement('span');
             tooltip.className = 'copy-tooltip';
             tooltip.textContent = 'Copied!';
@@ -71,7 +75,7 @@
                 <span class="cta-or">or</span>
                 <div class="cta-option">
                     <span class="cta-label">Direct Download</span>
-                    <a href="https://github.com/adamtwo/klippal/releases/latest" class="btn btn-secondary">Download for Mac</a>
+                    <a href="https://github.com/adamtwo/klippal/releases/latest" class="btn btn-secondary" onclick="gtag('event', 'download_click', {'event_category': 'engagement', 'event_label': 'hero'})">Download for Mac</a>
                 </div>
             </div>
             <p class="requirements">Verified by Apple for your security.</p>
@@ -138,7 +142,7 @@
                 <div class="download-option">
                     <h3>Direct Download</h3>
                     <p>Download and install manually</p>
-                    <a href="https://github.com/adamtwo/klippal/releases/latest" class="btn btn-secondary">Download for Mac</a>
+                    <a href="https://github.com/adamtwo/klippal/releases/latest" class="btn btn-secondary" onclick="gtag('event', 'download_click', {'event_category': 'engagement', 'event_label': 'download_section'})">Download for Mac</a>
                 </div>
             </div>
             <p class="signed-note">Requires macOS 13 Ventura or later.</p>
